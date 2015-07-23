@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Parejas de colores</title>
+<script>
+var req = new XMLHttpRequest();
+
+var col = null;
+var conta = 0;
+
+function oscura(div) {
+	
+	div.style.opacity = "0.7";
+}
+
+function ilumina(div) {
+	
+	div.style.opacity = "1";
+}
+
+function quedate(div) {
+
+	div.style.borderColor = "red";
+	if (col==null) {
+		col = div
+	} else if (col.style.backgroundColor==div.style.backgroundColor && div!=col) {
+		col.style.visibility = "hidden";
+		div.style.visibility = "hidden";
+		col = null;
+		conta ++;
+		if (conta == 10) {
+			alert("Enhorabuena, has terminado el juego!")
+		}
+	} else {
+		div.style.borderColor = "black";
+		col.style.borderColor = "black";
+		col = null;
+	}
+	
+	
+}
+</script>
+</head>
+<body>
+<div id="contenidor" style="background-color: white; width:99%; height:99%; position:absolute;">
+	<div id="1" style="background-color: yellow; width:19.5%; height:24%; float:left; border:1px solid black; border-top:2px solid black; border-left:2px solid black" onmouseover="oscura(this);" onmouseout="ilumina(this);" onclick="quedate(this);"></div>
+	<div id="2" style="background-color: blue; width:19.5%; height:24%; float:left; border:1px solid black; border-top:2px solid black" onmouseover="oscura(this);" onmouseout="ilumina(this);" onclick="quedate(this);"></div>
+	<div id="3" style="background-color: red; width:19.5%; height:24%; float:left; border:1px solid black; border-top:2px solid black" onmouseover="oscura(this);" onmouseout="ilumina(this);" onclick="quedate(this);"></div>
+	<div id="4" style="background-color: red; width:19.5%; height:24%; float:left; border:1px solid black; border-top:2px solid black" onmouseover="oscura(this);" onmouseout="ilumina(this);" onclick="quedate(this);"></div>
+	<div id="5" style="background-color: yellow; width:19.5%; height:24%; float:left; border:1px solid black; border-top:2px solid black; border-right:2px solid black" onmouseover="oscura(this);" onmouseout="ilumina(this);" onclick="quedate(this);"></div>
+	<div id="6" style="background-color: green; width:19.5%; height:24%; float:left; border:1px solid black; border-left:2px solid black" onmouseover="oscura(this);" onmouseout="ilumina(this);" onclick="quedate(this);"></div>
+	<div id="7" style="background-color: blue; width:19.5%; height:24%; float:left; border:1px solid black" onmouseover="oscura(this);" onmouseout="ilumina(this);" onclick="quedate(this);"></div>
+	<div id="8" style="background-color: green; width:19.5%; height:24%; float:left; border:1px solid black" onmouseover="oscura(this);" onmouseout="ilumina(this);" onclick="quedate(this);"></div>
+	<div id="9" style="background-color: black; width:19.5%; height:24%; float:left; border:1px solid black" onmouseover="oscura(this);" onmouseout="ilumina(this);" onclick="quedate(this);"></div>
+	<div id="10" style="background-color: maroon; width:19.5%; height:24%; float:left; border:1px solid black; border-right:2px solid black" onmouseover="oscura(this);" onmouseout="ilumina(this);" onclick="quedate(this);"></div>
+	<div id="11" style="background-color: gray; width:19.5%; height:24%; float:left; border:1px solid black; border-left:2px solid black" onmouseover="oscura(this);" onmouseout="ilumina(this);" onclick="quedate(this);"></div>
+	<div id="12" style="background-color: black; width:19.5%; height:24%; float:left; border:1px solid black" onmouseover="oscura(this);" onmouseout="ilumina(this);" onclick="quedate(this);"></div>
+	<div id="13" style="background-color: purple; width:19.5%; height:24%; float:left; border:1px solid black" onmouseover="oscura(this);" onmouseout="ilumina(this);" onclick="quedate(this);"></div>
+	<div id="14" style="background-color: purple; width:19.5%; height:24%; float:left; border:1px solid black" onmouseover="oscura(this);" onmouseout="ilumina(this);" onclick="quedate(this);"></div>
+	<div id="15" style="background-color: gray; width:19.5%; height:24%; float:left; border:1px solid black; border-right:2px solid black" onmouseover="oscura(this);" onmouseout="ilumina(this);" onclick="quedate(this);"></div>
+	<div id="16" style="background-color: orange; width:19.5%; height:24%; float:left; border:1px solid black; border-bottom:2px solid black; border-left:2px solid black" onmouseover="oscura(this);" onmouseout="ilumina(this);" onclick="quedate(this);"></div>
+	<div id="17" style="background-color: lime; width:19.5%; height:24%; float:left; border:1px solid black; border-bottom:2px solid black" onmouseover="oscura(this);" onmouseout="ilumina(this);" onclick="quedate(this);"></div>
+	<div id="18" style="background-color: maroon; width:19.5%; height:24%; float:left; border:1px solid black; border-bottom:2px solid black" onmouseover="oscura(this);" onmouseout="ilumina(this);" onclick="quedate(this);"></div>
+	<div id="19" style="background-color: orange; width:19.5%; height:24%; float:left; border:1px solid black; border-bottom:2px solid black" onmouseover="oscura(this);" onmouseout="ilumina(this);" onclick="quedate(this);"></div>
+	<div id="20" style="background-color: lime; width:19.5%; height:24%; float:left; border:1px solid black; border-bottom:2px solid black; border-right:2px solid black" onmouseover="oscura(this);" onmouseout="ilumina(this);" onclick="quedate(this);"></div>
+	
+</div>
+
+</body>
+</html>
